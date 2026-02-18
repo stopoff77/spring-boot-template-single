@@ -120,13 +120,18 @@ sourceSets {
 publishing {
     // repository publish
     repositories {
-        maven {
+/*
+        maven { // 원격 서버에 publish
             url deployUrl
             allowInsecureProtocol true // 강제로 http 사용하도록 하는 설정
             credentials {
                 username project.repositoryUsername
                 password project.repositoryPassword
             }
+        }
+*/
+        maven { // local maven repository에 publish
+            url localRepository
         }
     }
 
