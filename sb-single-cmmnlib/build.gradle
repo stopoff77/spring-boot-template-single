@@ -41,7 +41,7 @@ repositories {
     //mavenLocal() //.m2/repository 사용 함
     mavenCentral()
     maven {
-        url 'https://plugins.gradle.org/m2/'
+        url = 'https://plugins.gradle.org/m2/'
     }
 }
 
@@ -237,7 +237,7 @@ dependencies {
     implementation('com.navercorp.lucy:lucy-xss-servlet:2.0.1')
 
     /** org.json */
-    implementation group: 'org.json', name: 'json', version: '20211205'
+    implementation 'org.json:json:20211205'
 
     //implementation 'com.fasterxml.jackson.core:jackson-annotations'
     //implementation 'com.fasterxml.jackson.core:jackson-core'
@@ -275,8 +275,7 @@ tasks {
         println "bootJar"
         enabled = false
         archiveFileName = "${deployFileNameByProfile}"
-        duplicatesStrategy(DuplicatesStrategy.WARN)
-        //duplicatesStrategy = DuplicatesStrategy.WARN
+        duplicatesStrategy = DuplicatesStrategy.WARN
     }
 
     jar {
