@@ -1,14 +1,14 @@
 pluginManagement {
     repositories {
         maven {
-            url uri ("${rootProject.projectDir}/zMavenRepository")
+            url = "${rootProject.projectDir}/zMavenRepository"
             metadataSources {
                 mavenPom()
                 artifact()
             }
         }
         maven {
-            url uri ("${localRepository}")
+            url = "${localRepository}"
             metadataSources {
                 mavenPom()
                 artifact()

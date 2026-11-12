@@ -24,14 +24,14 @@ configurations {
 
 repositories {
     maven {
-        url uri ("${rootProject.projectDir}/zMavenRepository")
+        url = "${rootProject.projectDir}/zMavenRepository"
         metadataSources {
             mavenPom()
             artifact()
         }
     }
     maven {
-        url uri ("${localRepository}")
+        url = "${localRepository}"
         metadataSources {
             mavenPom()
             artifact()
@@ -122,7 +122,7 @@ publishing {
     repositories {
 /*
         maven { // 원격 서버에 publish
-            url deployUrl
+            url = deployUrl
             allowInsecureProtocol true // 강제로 http 사용하도록 하는 설정
             credentials {
                 username project.repositoryUsername
@@ -131,7 +131,7 @@ publishing {
         }
 */
         maven { // local maven repository에 publish
-            url localRepository
+            url = localRepository
         }
     }
 
@@ -263,9 +263,8 @@ tasks.javadoc {
 
 tasks {
     processResources {
-        duplicatesStrategy(DuplicatesStrategy.WARN)
         //duplicatesStrategy = DuplicatesStrategy.INCLUDE
-        //duplicatesStrategy = DuplicatesStrategy.WARN
+        duplicatesStrategy = DuplicatesStrategy.WARN
 
         // compileJava 후 실행
         mustRunAfter compileJava

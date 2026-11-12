@@ -21,7 +21,7 @@ configurations {
 
 repositories {
     maven {
-        url uri ("${localRepository}")
+        url = "${localRepository}"
         //allowInsecureProtocol true // 강제로 http 사용하도록 하는 설정
         metadataSources {
             mavenPom()
@@ -32,7 +32,7 @@ repositories {
     //mavenLocal() //.m2/repository 사용 함
     mavenCentral()
     maven {
-        url 'https://plugins.gradle.org/m2/'
+        url = 'https://plugins.gradle.org/m2/'
     }
 }
 

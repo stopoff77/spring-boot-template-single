@@ -1,7 +1,7 @@
 pluginManagement {
     repositories {
         maven {
-            url uri ("${localRepository}")
+            url = "${localRepository}"
             metadataSources {
                 mavenPom()
                 artifact()
