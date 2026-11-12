@@ -17,7 +17,6 @@ package com.example.securityweb;
 
 import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.autoconfigure.metrics.web.client.HttpClientMetricsAutoConfiguration;
 import org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -30,18 +29,14 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import com.example.cmmnlib.configuration.ComponentScanConfiguration;
 
 
-@EnableAutoConfiguration(exclude= {
+@EnableAutoConfiguration(exclude = {
         DataSourceAutoConfiguration.class // dataSource yml 설정시 제거
-      , MybatisAutoConfiguration.class    // mybatis yml 설정시 제거
-      , DataSourceTransactionManagerAutoConfiguration.class
-      , JndiDataSourceAutoConfiguration.class
-      , SecurityAutoConfiguration.class
-      , ManagementWebSecurityAutoConfiguration.class
-      , JacksonAutoConfiguration.class
-      , HttpClientMetricsAutoConfiguration.class // spring-boot-actuator-autoconfigure
+        , MybatisAutoConfiguration.class // mybatis yml 설정시 제거
+        , DataSourceTransactionManagerAutoConfiguration.class, JndiDataSourceAutoConfiguration.class,
+        SecurityAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class, JacksonAutoConfiguration.class
 //      , org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration.class
 })
-@SpringBootApplication( scanBasePackageClasses = { ComponentScanConfiguration.class } )
+@SpringBootApplication(scanBasePackageClasses = { ComponentScanConfiguration.class })
 public class SpringBootWebApplication {
 
     public static void main(String[] args) {

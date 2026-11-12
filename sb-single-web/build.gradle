@@ -175,7 +175,9 @@ dependencies {
     implementation 'commons-fileupload:commons-fileupload:1.5' // file upload
 
     /** java servlet */
-    implementation('javax.servlet:jstl')
+    //implementation('javax.servlet:jstl')
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.1.0-M2'
+
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
     /** lucy-xss-servlet< */

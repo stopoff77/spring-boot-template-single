@@ -1,8 +1,5 @@
 package com.example.securityweb.biz.demo.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -12,6 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.cmmnlib.dto.MapDto;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -25,7 +24,6 @@ public class SampleController {
     private String instanceName;
 
 
-
     /**
      *
      */
@@ -34,12 +32,12 @@ public class SampleController {
     }
 
 
-    @RequestMapping({"/", "/home"})
+    @RequestMapping({ "/", "/home" })
     @ResponseBody
     public MapDto home(HttpServletRequest request, HttpSession session) {
         log.debug("home run! {}", env);
 
-        MapDto dto= new MapDto();
+        MapDto dto = new MapDto();
         dto.put("A", "A");
         dto.put("B", "B");
 

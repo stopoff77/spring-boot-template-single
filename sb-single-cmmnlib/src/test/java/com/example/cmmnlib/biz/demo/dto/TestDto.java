@@ -2,8 +2,7 @@ package com.example.cmmnlib.biz.demo.dto;
 
 import java.util.List;
 
-import javax.validation.constraints.NotEmpty;
-
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -23,10 +22,10 @@ public class TestDto {
     private int tmpInt;
 
     private List<SubDto> subList;
-    private SubDto[] subList2;
+    private SubDto[]     subList2;
 
     private SubDto subDto;
 
     private List<String> strList;
-    private String[] strList2;
+    private String[]     strList2;
 }
