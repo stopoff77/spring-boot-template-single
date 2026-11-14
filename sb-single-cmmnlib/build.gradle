@@ -158,8 +158,8 @@ publishing {
 
 dependencies {
     /** lombok & spring-boot-devtools */
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
     //testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
     //testCompileOnly 'org.projectlombok:lombok:1.18.22'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -167,10 +167,10 @@ dependencies {
 
     /** spring-boot */
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-    implementation      'org.springframework.boot:spring-boot-actuator-autoconfigure'
+    implementation      'org.springframework.boot:spring-boot-starter-actuator'
 
     /** spring-boot-starter */
-    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation "org.springframework.boot:spring-boot-starter-aop:${springBootAopVersion}"
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
@@ -187,8 +187,8 @@ dependencies {
        //exclude module : 'org.junit.vintage:junit-vintage-engine'
     }
     testImplementation 'io.projectreactor:reactor-test'
-    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
-    testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine'
     testImplementation 'org.junit.platform:junit-platform-runner:1.7.1'
 
 
